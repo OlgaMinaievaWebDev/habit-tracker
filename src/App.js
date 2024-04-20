@@ -10,6 +10,17 @@ export default function App() {
     setHabits((habits) => [...habits, habit]);
   }
 
+  function handleIncrementHabit(id) {
+    setHabits((habits) =>
+      habits.map((habit) => {
+        if (habit.id === id) {
+          return { ...habit, count: habit.count + 1 };
+        }
+        return habit;
+      })
+    );
+  }
+
   function handleDeleteHabit(id) {
     setHabits((habits) => habits.filter((habit) => habit.id !== id));
   }
@@ -18,7 +29,11 @@ export default function App() {
     <div className="container">
       <Header />
       <Form onAddHabit={handleAddHabits} />
-      <HabitsList habits={habits} onDeleteHabit={handleDeleteHabit} />
+      <HabitsList
+        habits={habits}
+        onDeleteHabit={handleDeleteHabit}
+        onIncrementHabit={handleIncrementHabit}
+      />
     </div>
   );
 }

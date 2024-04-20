@@ -1,11 +1,20 @@
 import Habit from "./Habit";
 
-export default function HabitsList({ habits, onDeleteHabit }) {
+export default function HabitsList({
+  habits,
+  onDeleteHabit,
+  onIncrementHabit,
+}) {
   return (
     <div className="habit-list">
       <ul>
         {habits.map((habit) => (
-          <Habit key={habit.id} habit={habit} onDeleteHabit={onDeleteHabit} />
+          <Habit
+            key={habit.id}
+            habit={habit}
+            onDeleteHabit={onDeleteHabit}
+            onIncrementHabit={onIncrementHabit}
+          />
         ))}
       </ul>
     </div>

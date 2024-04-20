@@ -5,7 +5,7 @@ export default function Form({ onAddHabit }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const newHabit = { description, isHabit: false, id: Date.now() };
+    const newHabit = { description, isHabit: false, count: 0, id: Date.now() };
     onAddHabit(newHabit);
     setDescription("");
   }
