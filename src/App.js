@@ -25,6 +25,10 @@ export default function App() {
     setHabits((habits) => habits.filter((habit) => habit.id !== id));
   }
 
+  function handleResetAll() {
+    setHabits([]);
+  }
+
   return (
     <div className="container">
       <Header />
@@ -33,6 +37,7 @@ export default function App() {
         habits={habits}
         onDeleteHabit={handleDeleteHabit}
         onIncrementHabit={handleIncrementHabit}
+        onReset={handleResetAll}
       />
     </div>
   );

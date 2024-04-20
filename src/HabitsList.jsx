@@ -4,6 +4,7 @@ export default function HabitsList({
   habits,
   onDeleteHabit,
   onIncrementHabit,
+  onReset,
 }) {
   return (
     <div className="habit-list">
@@ -17,6 +18,7 @@ export default function HabitsList({
           />
         ))}
       </ul>
+      <button onClick={onReset}>Reset All</button>
     </div>
   );
 }
