@@ -4,6 +4,7 @@ export default function HabitsList({
   habits,
   onDeleteHabit,
   onIncrementHabit,
+
   onReset,
 }) {
   return (
