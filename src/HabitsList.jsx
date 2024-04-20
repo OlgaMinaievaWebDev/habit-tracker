@@ -18,7 +18,9 @@ export default function HabitsList({
           />
         ))}
       </ul>
-      <button onClick={onReset}>Reset All</button>
+      <button className="reset" onClick={onReset}>
+        Clear All
+      </button>
     </div>
   );
 }
